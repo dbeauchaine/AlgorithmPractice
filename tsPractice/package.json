@@ -8,10 +8,13 @@
   },
   "scripts": {
     "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.18",
     "@types/node": "^8.0.14",
+    "jest": "^24.9.0",
     "typescript": "^3.2.2"
   }
 }
