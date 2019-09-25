@@ -1,10 +1,25 @@
-﻿describe('Test Suite 1', function () {
-    it("Test 1 - This shouldn't fail", function () {
-        expect(true).toBeTruthy();
-    });
+﻿import { removeDuplicates } from "./removeDuplicates";
 
-    it('Test 2 - This should fail', function () {
-        expect(1 === 1).toBeTruthy(); // "This shouldn't fail"
-        expect(false).toBeTruthy();
+describe('removeDuplicatesTests', () => {
+    let testCases: TestCase[] = [
+        { expectedLength: 0, inputArray: [], description: 'Empty Array' },
+        { expectedLength: 1, inputArray: [1], description: 'Array length 1' },
+        { expectedLength: 3, inputArray: [1, 4, 8], description: 'Array length 3' },
+        { expectedLength: 2, inputArray: [1, 1, 2], description: 'Array length 3, 1 duplicate' },
+        { expectedLength: 3, inputArray: [1, 1, 2, 2, 3], description: 'Array length 5, 2 duplicates' },
+        { expectedLength: 1, inputArray: [1,1,1,1,1,1,1,1,1,1], description: 'Array length 10, all duplicates' }
+    ];
+    testCases.forEach((testCase: TestCase) => {
+        it(`Returns length of array after duplicates have been removed: ${testCase.description}`, () => {
+            let arrayLength = removeDuplicates(testCase.inputArray);
+
+            expect(arrayLength).toEqual(testCase.expectedLength);
+        });
+
     });
+    interface TestCase {
+        expectedLength: number;
+        inputArray: number[];
+        description: string;
+    }
 });
