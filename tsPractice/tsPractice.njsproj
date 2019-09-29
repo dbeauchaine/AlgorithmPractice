@@ -30,6 +30,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="BuyAndSellStock\BuyAndSellStocks.test.ts">
+      <SubType>Code</SubType>
+      <TestFramework>Jest</TestFramework>
+    </Content>
     <Content Include="jest.config.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -40,9 +44,13 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BuyAndSellStock\" />
     <Folder Include="removeDuplicatesFromSortedArray\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="BuyAndSellStock\BuyAndSellStock.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="removeDuplicatesFromSortedArray\removeDuplicates.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
