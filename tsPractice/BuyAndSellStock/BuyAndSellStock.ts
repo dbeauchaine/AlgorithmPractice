@@ -4,18 +4,19 @@
     let purchasePrice: number = null;
 
     if (stockPrices.length >= 2) {
-        for (let currentDay = 1; currentDay < stockPrices.length; currentDay++) {
-            let previousPrice = stockPrices[currentDay - 1];
+        for (let currentDay = 0; currentDay < stockPrices.length; currentDay++) {
+            let nextPrice = stockPrices[currentDay + 1];
             let currentPrice = stockPrices[currentDay];
+            let shouldSell = nextPrice < currentPrice;
+            let shouldBuy = nextPrice > currentPrice;
+            let isFinalDay = currentDay + 1 === stockPrices.length;
 
-            if (previousPrice < currentPrice && !purchasePrice) {
-                purchasePrice = previousPrice;
-            } else if (previousPrice > currentPrice && purchasePrice) {
-                totalProfit += previousPrice - purchasePrice;
-                purchasePrice = null;
+            if (shouldBuy && !purchasePrice) {
+                purchasePrice = currentPrice;
             }
-            if (currentDay + 1 === stockPrices.length && purchasePrice) {
+            if ((shouldSell || isFinalDay) && purchasePrice) {
                 totalProfit += currentPrice - purchasePrice;
+                purchasePrice = null;
             }
         }
     }
