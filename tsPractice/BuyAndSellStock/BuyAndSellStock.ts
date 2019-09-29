@@ -1,27 +1,24 @@
-﻿export function buyAndSellStocks(array: number[]) {
+﻿export function buyAndSellStocks(stockPrices: number[]) {
 
-    let profit = 0;
-    let purchased: number = null;
+    let totalProfit = 0;
+    let purchasePrice: number = null;
 
-    if (array.length >= 2) {
-        for (let i = 1; i < array.length; i++) {
-            if (array[i - 1] < array[i]) {
-                if (!purchased) {
-                    purchased = array[i - 1];
-                }
+    if (stockPrices.length >= 2) {
+        for (let currentDay = 1; currentDay < stockPrices.length; currentDay++) {
+            let previousPrice = stockPrices[currentDay - 1];
+            let currentPrice = stockPrices[currentDay];
 
-            } else if(array[i-1] > array[i]) {
-                if (purchased) {
-                    profit += array[i - 1] - purchased;
-                    purchased = null;
-                } else {
-                    purchased = array[i];
-                }
+            if (previousPrice < currentPrice && !purchasePrice) {
+                purchasePrice = previousPrice;
+            } else if (previousPrice > currentPrice && purchasePrice) {
+                totalProfit += previousPrice - purchasePrice;
+                purchasePrice = null;
             }
-            if (i + 1 === array.length && purchased) {
-                profit += array[i] - purchased;
+            if (currentDay + 1 === stockPrices.length && purchasePrice) {
+                totalProfit += currentPrice - purchasePrice;
             }
         }
     }
-    return profit;
+
+    return totalProfit;
 }
