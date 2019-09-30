@@ -45,7 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BuyAndSellStock\" />
-    <Folder Include="removeDuplicatesFromSortedArray\" />
+    <Folder Include="RotateArray\" />
+    <Folder Include="RemoveDuplicatesFromSortedArray\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="BuyAndSellStock\BuyAndSellStock.ts">
@@ -53,6 +54,13 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="removeDuplicatesFromSortedArray\removeDuplicates.ts">
       <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="RotateArray\RotateArray.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="RotateArray\RotateArrayTest.test.ts">
+      <SubType>Code</SubType>
+      <TestFramework>Jest</TestFramework>
     </TypeScriptCompile>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
