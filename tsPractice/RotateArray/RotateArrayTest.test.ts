@@ -1,4 +1,5 @@
 ﻿import { rotateArray } from "./RotateArray";
+import { verifyArray } from "../TestHelpers/verifyArray";
 
 describe('rotateArrayTests', () => {
     let testCases: TestCase[] = [
@@ -11,14 +12,6 @@ describe('rotateArrayTests', () => {
         { arrayToRotate: [-1, -100, 3, 99], arraySolution: [3, 99, -1, -100], steps: 2, description: "rotate 2 with 4 elements, including negatives. (from Exercise)"}
     ];
 
-    it('Test of verifyArray, returns true when two arrays contain the same elements.', () => {
-        expect(verifyArray([1, 2, 3], [1, 2, 3])).toBeTruthy();
-    })
-
-    it('Test of verifyArray, returns false when two arrays do not contain the same elements.', () => {
-        expect(verifyArray([1, 2, 3], [2, 1, 3])).toBeFalsy();
-    })
-
     testCases.forEach((testCases: TestCase) => {
         it(`Returns void, rotates the passed array. ${testCases.description}`, () => {
             rotateArray(testCases.arrayToRotate, testCases.steps);
@@ -27,6 +20,7 @@ describe('rotateArrayTests', () => {
 
     })
 
+
     interface TestCase {
         arrayToRotate: number[];
         arraySolution: number[];
@@ -34,16 +28,5 @@ describe('rotateArrayTests', () => {
         description: string;
     }
 
-    function verifyArray(modifiedArray: number[], expectedArray: number[]) {
-        let areEqual = true;
-
-        for (let i = 0; i < expectedArray.length; i++) {
-            if (expectedArray[i] !== modifiedArray[i]) {
-                areEqual = false;
-            }
-        }
-
-        return areEqual;
-    }
 });
 
