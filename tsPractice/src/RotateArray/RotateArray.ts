@@ -1,8 +1,6 @@
 ﻿export function rotateArray(arrayToRotate: number[], steps: number) {
-    if (steps > 0) {
-        for (let i = steps; i > 0; i--) {
-            rotate(arrayToRotate);
-        }
+    for (let i = steps; i > 0; i--) {
+        rotate(arrayToRotate);
     }
 }
 

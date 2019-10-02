@@ -11,7 +11,7 @@ describe("BuyAndSellStocksTests", () => {
         { profit: 2, inputArray: [1, 2, 2, 3], description: "Buy on day one, sell on day 4. Profit = 2. Duplicate number." },
         { profit: 2, inputArray: [1, 2, 3, 3], description: "Buy on day one, sell on day 4. Profit = 2. Duplicate on selling day." },
         { profit: 0, inputArray: [1, 1, 1, 1, 1, 1], description: "Never buy, profit = 0. All duplicates." },
-        { profit: 2, inputArray: [2, 1, 2, 0, 1], description: "Buy on one, sell on 2, buy on 4, sell on 5. Buying at zero is handled." },
+        { profit: 2, inputArray: [2, 1, 2, 0, 1], description: "Buy on one, sell on 2, buy on 4, sell on 5. Buying at zero is handled." }
     ];
 
     testCases.forEach((scenario: TestCase) => {
