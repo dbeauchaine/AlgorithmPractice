@@ -48,6 +48,7 @@
   <ItemGroup>
     <Folder Include="src\BuyAndSellStock\" />
     <Folder Include="src\" />
+    <Folder Include="src\ContainsDuplicates\" />
     <Folder Include="src\TestHelpers\" />
     <Folder Include="src\RotateArray\" />
     <Folder Include="src\RemoveDuplicatesFromSortedArray\" />
@@ -55,6 +56,13 @@
   <ItemGroup>
     <TypeScriptCompile Include="Src\BuyAndSellStock\BuyAndSellStock.ts">
       <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\ContainsDuplicates\containsDuplicates.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\ContainsDuplicates\containsDuplicates.test.ts">
+      <SubType>Code</SubType>
+      <TestFramework>Jest</TestFramework>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Src\RemoveDuplicatesFromSortedArray\removeDuplicates.ts">
       <SubType>Code</SubType>
