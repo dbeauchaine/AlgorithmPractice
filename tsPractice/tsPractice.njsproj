@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b6a90dbd-1a86-45f6-85d9-ff8bd0b42704</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>BuyAndSellStock\BuyAndSellStock.ts</StartupFile>
+    <StartupFile>Src\BuyAndSellStock\BuyAndSellStock.ts</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -29,44 +29,48 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="BuyAndSellStock\BuyAndSellStocks.test.ts">
+    <Content Include="Src\BuyAndSellStock\BuyAndSellStocks.test.ts">
       <SubType>Code</SubType>
       <TestFramework>Jest</TestFramework>
     </Content>
     <Content Include="jest.config.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="removeDuplicatesFromSortedArray\removeDuplicates.test.ts">
+    <Content Include="Src\RemoveDuplicatesFromSortedArray\removeDuplicates.test.ts">
       <SubType>Code</SubType>
       <TestFramework>Jest</TestFramework>
     </Content>
     <Content Include="tsconfig.json" />
+    <Content Include="tslint.json">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BuyAndSellStock\" />
-    <Folder Include="TestHelpers\" />
-    <Folder Include="RotateArray\" />
-    <Folder Include="RemoveDuplicatesFromSortedArray\" />
+    <Folder Include="src\BuyAndSellStock\" />
+    <Folder Include="src\" />
+    <Folder Include="src\TestHelpers\" />
+    <Folder Include="src\RotateArray\" />
+    <Folder Include="src\RemoveDuplicatesFromSortedArray\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="BuyAndSellStock\BuyAndSellStock.ts">
+    <TypeScriptCompile Include="Src\BuyAndSellStock\BuyAndSellStock.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="removeDuplicatesFromSortedArray\removeDuplicates.ts">
+    <TypeScriptCompile Include="Src\RemoveDuplicatesFromSortedArray\removeDuplicates.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="RotateArray\RotateArray.ts">
+    <TypeScriptCompile Include="Src\RotateArray\RotateArray.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="RotateArray\RotateArrayTest.test.ts">
+    <TypeScriptCompile Include="Src\RotateArray\RotateArrayTest.test.ts">
       <SubType>Code</SubType>
       <TestFramework>Jest</TestFramework>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="TestHelpers\verifyArray.test.ts">
+    <TypeScriptCompile Include="Src\TestHelpers\verifyArray.test.ts">
       <SubType>Code</SubType>
       <TestFramework>Jest</TestFramework>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="TestHelpers\verifyArray.ts">
+    <TypeScriptCompile Include="Src\TestHelpers\verifyArray.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>

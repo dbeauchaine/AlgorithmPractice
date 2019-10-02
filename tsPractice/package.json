@@ -16,5 +16,8 @@
     "@types/node": "^8.0.14",
     "jest": "^24.9.0",
     "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "tslint": "^5.20.0"
   }
 }

@@ -10,7 +10,7 @@
             temp = array[i];
             i++;
         }
-    };
+    }
 
     return array.length;
 }
