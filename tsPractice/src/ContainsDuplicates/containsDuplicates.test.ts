@@ -1,6 +1,6 @@
 ﻿import { containsDuplicate } from "./containsDuplicates";
 
-describe('containsDuplicates', () => {
+describe("containsDuplicates", () => {
     const testCases: TestCase[] = [
         { inputArray: [1], expectedValue: false, description: "Array length 1, contains no duplicates." },
         { inputArray: [1, 1], expectedValue: true, description: "Array length 2, contains duplicates." },
