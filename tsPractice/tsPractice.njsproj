@@ -49,6 +49,7 @@
     <Folder Include="src\BuyAndSellStock\" />
     <Folder Include="src\" />
     <Folder Include="src\ContainsDuplicates\" />
+    <Folder Include="src\SingleNumber\" />
     <Folder Include="src\TestHelpers\" />
     <Folder Include="src\RotateArray\" />
     <Folder Include="src\RemoveDuplicatesFromSortedArray\" />
@@ -73,6 +74,13 @@
     <TypeScriptCompile Include="Src\RotateArray\RotateArrayTest.test.ts">
       <SubType>Code</SubType>
       <TestFramework>Jest</TestFramework>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\SingleNumber\singleNumber.test.ts">
+      <SubType>Code</SubType>
+      <TestFramework>Jest</TestFramework>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\SingleNumber\singleNumber.ts">
+      <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Src\TestHelpers\verifyArray.test.ts">
       <SubType>Code</SubType>

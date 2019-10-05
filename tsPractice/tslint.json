@@ -3,7 +3,14 @@
   "rules": {
     "interface-name": false,
     "max-line-length": [ true, 150 ],
-    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "prefer-for-of": false
 
   }
 }
