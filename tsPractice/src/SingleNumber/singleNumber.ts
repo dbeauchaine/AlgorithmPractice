@@ -1,19 +1,28 @@
 export function singleNumber(inputArray: number[]) {
+    const numberMap = countInstancesOfValue(inputArray);
+
+    return valueOfSingleInstance(numberMap);
+}
+
+function countInstancesOfValue(inputArray: number[]): Map<number, number> {
     const numberMap: Map<number, number> = new Map();
 
-    for (let i = 0; i < inputArray.length; i++) {
+    for (const value of inputArray) {
+        const instancesOfValue = numberMap.get(value);
 
-        let count = numberMap.get(inputArray[i]);
-        if (count) {
-            count++;
-            numberMap.set(inputArray[i], count);
+        if (instancesOfValue) {
+            numberMap.set(value, instancesOfValue + 1);
         } else {
-            numberMap.set(inputArray[i], 1);
+            numberMap.set(value, 1);
         }
     }
 
-    for (const [key, value] of numberMap.entries()) {
-        if (value === 1) {
+    return numberMap;
+}
+
+function valueOfSingleInstance(numberMap: Map<number, number>): number {
+    for (const [key, count] of numberMap.entries()) {
+        if (count === 1) {
             return key;
         }
     }
