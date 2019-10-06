@@ -36,6 +36,10 @@
     <Content Include="jest.config.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="src\InstersectionOfTwoArraysII\intersectionOfTwoArraysII.test.ts">
+      <SubType>Code</SubType>
+      <TestFramework>Jest</TestFramework>
+    </Content>
     <Content Include="Src\RemoveDuplicatesFromSortedArray\removeDuplicates.test.ts">
       <SubType>Code</SubType>
       <TestFramework>Jest</TestFramework>
@@ -49,12 +53,16 @@
     <Folder Include="src\BuyAndSellStock\" />
     <Folder Include="src\" />
     <Folder Include="src\ContainsDuplicates\" />
+    <Folder Include="src\InstersectionOfTwoArraysII\" />
     <Folder Include="src\SingleNumber\" />
     <Folder Include="src\TestHelpers\" />
     <Folder Include="src\RotateArray\" />
     <Folder Include="src\RemoveDuplicatesFromSortedArray\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\global.d.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Src\BuyAndSellStock\BuyAndSellStock.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
@@ -64,6 +72,9 @@
     <TypeScriptCompile Include="src\ContainsDuplicates\containsDuplicates.test.ts">
       <SubType>Code</SubType>
       <TestFramework>Jest</TestFramework>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\InstersectionOfTwoArraysII\intersectionOfTwoArraysII.ts">
+      <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Src\RemoveDuplicatesFromSortedArray\removeDuplicates.ts">
       <SubType>Code</SubType>
