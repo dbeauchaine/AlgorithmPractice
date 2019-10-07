@@ -6,17 +6,11 @@ export function intersectionOfTwoArraysII(firstArray: number[], secondArray: num
     const intersection: number[] = [];
 
     for (const [key, firstValue] of firstMap) {
-        const secondValue = secondMap.get(key);
-
+        const secondValue: number = secondMap.get(key);
+        const minimumValue: number = Math.min(firstValue, secondValue);
         if (secondValue) {
-            if (firstValue <= secondValue) {
-                for (let i = 0; i < firstValue; i++) {
-                    intersection.push(key);
-                }
-            } else {
-                for (let i = 0; i < secondValue; i++) {
-                    intersection.push(key);
-                }
+            for (let i = 0; i < minimumValue; i++) {
+                intersection.push(key);
             }
         }
     }
