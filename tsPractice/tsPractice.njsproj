@@ -54,6 +54,7 @@
     <Folder Include="src\" />
     <Folder Include="src\ContainsDuplicates\" />
     <Folder Include="src\InstersectionOfTwoArraysII\" />
+    <Folder Include="src\MoveZeroes\" />
     <Folder Include="src\SingleNumber\" />
     <Folder Include="src\TestHelpers\" />
     <Folder Include="src\RotateArray\" />
@@ -74,6 +75,13 @@
       <TestFramework>Jest</TestFramework>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\InstersectionOfTwoArraysII\intersectionOfTwoArraysII.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\MoveZeroes\moveZeroes.test.ts">
+      <SubType>Code</SubType>
+      <TestFramework>Jest</TestFramework>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\MoveZeroes\moveZeroes.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Src\RemoveDuplicatesFromSortedArray\removeDuplicates.ts">

@@ -1,4 +1,3 @@
-import { verifyArray } from "../TestHelpers/verifyArray";
 import { intersectionOfTwoArraysII } from "./intersectionOfTwoArraysII";
 
 describe("intersectionOfTwoArraysII", () => {
