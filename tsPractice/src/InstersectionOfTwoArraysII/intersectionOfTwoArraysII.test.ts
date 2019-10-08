@@ -1,6 +1,6 @@
 import { intersectionOfTwoArraysII } from "./intersectionOfTwoArraysII";
 
-describe("intersectionOfTwoArraysII", () => {
+describe("intersectionOfTwoArraysIITests", () => {
     const testCases: TestCase[] = [
         { firstArray: [1], secondArray: [0], expectedOutput: [], description: "No intersection. Returns empty array." },
         { firstArray: [1], secondArray: [1], expectedOutput: [1], description: "Identical argument arrays." },
