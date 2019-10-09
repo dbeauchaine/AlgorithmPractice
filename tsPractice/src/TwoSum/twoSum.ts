@@ -1,13 +1,13 @@
 export function twoSum(inputArray: number[], target: number) {
-    for (let i = 0; i < inputArray.length; i++) {
-        const firstValue = inputArray[i];
+    for (let firstIndex = 0; firstIndex < inputArray.length; firstIndex++) {
+        const firstValue = inputArray[firstIndex];
 
-        for (let j = i + 1; j < inputArray.length; j++) {
-            const secondValue = inputArray[j];
+        for (let secondIndex = firstIndex + 1; secondIndex < inputArray.length; secondIndex++) {
+            const secondValue = inputArray[secondIndex];
             const totalValue = firstValue + secondValue;
 
             if (totalValue === target) {
-                return [i, j];
+                return [firstIndex, secondIndex];
             }
         }
     }
