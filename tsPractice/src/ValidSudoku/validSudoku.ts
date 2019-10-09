@@ -1,20 +1,12 @@
 import { isThrowStatement } from "@babel/types";
 
 export function validSudoku(inputArray: string[][]): boolean {
-    let isValid = validateRows(inputArray);
-    if (!isValid) {
-        return false;
-    }
-
-    isValid = validateColumns(inputArray);
-    if (!isValid) {
-        return false;
-    }
-
-    return isValid;
+    return rowsAreValid(inputArray)
+        && columnsAreValid(inputArray)
+        && subBoxesAreValid(inputArray);
 }
 
-function validateRows(inputArray: string[][]): boolean {
+function rowsAreValid(inputArray: string[][]): boolean {
     for (let row = 0; row < inputArray.length; row++) {
         const rowSet: Set<string> = new Set();
 
@@ -33,7 +25,7 @@ function validateRows(inputArray: string[][]): boolean {
     return true;
 }
 
-function validateColumns(inputArray: string[][]): boolean {
+function columnsAreValid(inputArray: string[][]): boolean {
     for (let column = 0; column < inputArray[0].length; column++) {
         const columnSet: Set<string> = new Set();
 
@@ -44,6 +36,25 @@ function validateColumns(inputArray: string[][]): boolean {
                     return false;
                 } else {
                     columnSet.add(value);
+                }
+            }
+        }
+    }
+
+    return true;
+}
+
+function subBoxesAreValid(inputArray: string[][]): boolean {
+    const subBoxSet: Set<string> = new Set();
+
+    for (let row = 0; row < 3; row++) {
+        for (let column = 0; column < 3; column++) {
+            const value = inputArray[row][column];
+            if (value !== ".") {
+                if (subBoxSet.has(value)) {
+                    return false;
+                } else {
+                    subBoxSet.add(value);
                 }
             }
         }
