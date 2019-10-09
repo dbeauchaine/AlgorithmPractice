@@ -1,5 +1,3 @@
-import { isThrowStatement } from "@babel/types";
-
 export function validSudoku(inputArray: string[][]): boolean {
     return rowsAreValid(inputArray)
         && columnsAreValid(inputArray)
@@ -44,11 +42,13 @@ function columnsAreValid(inputArray: string[][]): boolean {
     return true;
 }
 
-function subBoxesAreValid(inputArray: string[][]): boolean {
+function subBoxIsValid(inputArray: string[][], rowStart: number, columnStart: number): boolean {
     const subBoxSet: Set<string> = new Set();
+    const rowEnd = rowStart + 3;
+    const columnEnd = columnStart + 3;
 
-    for (let row = 0; row < 3; row++) {
-        for (let column = 0; column < 3; column++) {
+    for (let row = rowStart; row < rowEnd; row++) {
+        for (let column = columnStart; column < columnEnd; column++) {
             const value = inputArray[row][column];
             if (value !== ".") {
                 if (subBoxSet.has(value)) {
@@ -56,6 +56,18 @@ function subBoxesAreValid(inputArray: string[][]): boolean {
                 } else {
                     subBoxSet.add(value);
                 }
+            }
+        }
+    }
+
+    return true;
+}
+
+function subBoxesAreValid(inputArray: string[][]): boolean {
+    for (let row = 0; row < 9; row += 3) {
+        for (let column = 0; column < 9; column += 3) {
+            if (!subBoxIsValid(inputArray, row, column)) {
+                return false;
             }
         }
     }
