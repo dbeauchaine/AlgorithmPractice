@@ -55,6 +55,7 @@
     <Folder Include="src\ContainsDuplicates\" />
     <Folder Include="src\InstersectionOfTwoArraysII\" />
     <Folder Include="src\MoveZeroes\" />
+    <Folder Include="src\TwoSum\" />
     <Folder Include="src\SingleNumber\" />
     <Folder Include="src\TestHelpers\" />
     <Folder Include="src\RotateArray\" />
@@ -106,6 +107,13 @@
       <TestFramework>Jest</TestFramework>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Src\TestHelpers\verifyArray.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\TwoSum\twoSum.test.ts">
+      <SubType>Code</SubType>
+      <TestFramework>ExportRunner</TestFramework>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\TwoSum\twoSum.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>
