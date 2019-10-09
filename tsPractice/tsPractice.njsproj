@@ -55,6 +55,7 @@
     <Folder Include="src\ContainsDuplicates\" />
     <Folder Include="src\InstersectionOfTwoArraysII\" />
     <Folder Include="src\MoveZeroes\" />
+    <Folder Include="src\ValidSudoku\" />
     <Folder Include="src\TwoSum\" />
     <Folder Include="src\SingleNumber\" />
     <Folder Include="src\TestHelpers\" />
@@ -114,6 +115,12 @@
       <TestFramework>ExportRunner</TestFramework>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\TwoSum\twoSum.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\ValidSudoku\validSudoku.test.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\ValidSudoku\validSudoku.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>
