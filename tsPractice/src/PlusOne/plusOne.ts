@@ -1,21 +1,33 @@
 export function plusOne(inputArray: number[]): number[] {
-    const modifiedArray: number[] = inputArray;
+    let modifiedArray: number[] = inputArray;
     const lastIndex: number = modifiedArray.length - 1;
     const lastValue: number = modifiedArray[lastIndex];
 
     modifiedArray[lastIndex] = lastValue + 1;
 
-    for (let index = modifiedArray.length; index > 0; index--) {
-        if (modifiedArray[index] === 10) {
-            modifiedArray[index] = 0;
-            modifiedArray[index - 1] = modifiedArray[index - 1] + 1;
+    modifiedArray = carryOverDigits(modifiedArray);
+
+    return modifiedArray;
+}
+
+function carryOverDigits(array: number[]): number[] {
+    for (let index = array.length; index > 0; index--) {
+        if (array[index] === 10) {
+            array[index] = 0;
+            array[index - 1] = array[index - 1] + 1;
         }
     }
 
-    if (modifiedArray[0] === 10) {
-        modifiedArray[0] = 0;
-        modifiedArray.splice(0, 0, 1);
+    if (array[0] === 10) {
+        carryOverAndExpand(array);
     }
 
-    return modifiedArray;
+    return array;
+}
+
+function carryOverAndExpand(array: number[]): number[] {
+    array[0] = 0;
+    array.splice(0, 0, 1);
+
+    return array;
 }
