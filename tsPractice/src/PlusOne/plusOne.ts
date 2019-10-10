@@ -11,6 +11,11 @@ export function plusOne(inputArray: number[]): number[] {
             modifiedArray[index - 1] = modifiedArray[index - 1] + 1;
         }
     }
-    
+
+    if (modifiedArray[0] === 10) {
+        modifiedArray[0] = 0;
+        modifiedArray.splice(0, 0, 1);
+    }
+
     return modifiedArray;
 }
