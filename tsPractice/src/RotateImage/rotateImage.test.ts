@@ -13,7 +13,56 @@ describe("rotateImageTests", () => {
                 [0, 0]
             ],
             description: "No rotation required."
+        },
+        {
+            inputArray: [
+                [1, 0],
+                [0, 0]
+            ],
+            modifiedArray: [
+                [0, 1],
+                [0, 0]
+            ],
+            description: "One element rotation."
+        },
+        {
+            inputArray: [
+                [1, 2],
+                [3, 4]
+            ],
+            modifiedArray: [
+                [3, 1],
+                [4, 2]
+            ],
+            description: "Four element rotation."
+        },
+        {
+            inputArray: [
+                [1, 0, 2],
+                [0, 0, 0],
+                [3, 0, 4]
+            ],
+            modifiedArray: [
+                [3, 0, 1],
+                [0, 0, 0],
+                [4, 0, 2]
+            ],
+            description: "4 element rotation. 3x3"
+        },
+        {
+            inputArray: [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+            ],
+            modifiedArray: [
+                [7, 4, 1],
+                [8, 5, 2],
+                [9, 6, 3]
+            ],
+            description: "9 element rotation. 3x3"
         }
+
     ];
 
     testCases.forEach((testCase: TestCase) => {
