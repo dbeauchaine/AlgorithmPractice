@@ -1,5 +1,5 @@
 export function plusOne(inputArray: number[]): number[] {
-    let modifiedArray: number[] = inputArray;
+    let modifiedArray: number[] = inputArray.slice();
     const lastIndex: number = modifiedArray.length - 1;
     const lastValue: number = modifiedArray[lastIndex];
 
