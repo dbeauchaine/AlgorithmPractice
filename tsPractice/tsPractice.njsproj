@@ -56,6 +56,7 @@
     <Folder Include="src\InstersectionOfTwoArraysII\" />
     <Folder Include="src\MoveZeroes\" />
     <Folder Include="src\RotateImage\" />
+    <Folder Include="src\PlusOne\" />
     <Folder Include="src\ValidSudoku\" />
     <Folder Include="src\TwoSum\" />
     <Folder Include="src\SingleNumber\" />
@@ -85,6 +86,12 @@
       <TestFramework>Jest</TestFramework>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\MoveZeroes\moveZeroes.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\PlusOne\plusOne.test.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\PlusOne\plusOne.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Src\RemoveDuplicatesFromSortedArray\removeDuplicates.ts">
