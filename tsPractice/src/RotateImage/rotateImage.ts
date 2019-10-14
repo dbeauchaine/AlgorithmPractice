@@ -1,26 +1,27 @@
 export function rotateImage(matrix: number[][]): void {
-    let lastIndex = matrix.length - 1;
+    const lastIndex = matrix.length - 1;
+    let index = lastIndex;
 
-    let currentRow = 0;
-    let currentColumn = 0;
-    let temp = matrix[0][0];
-  
-    do {
-        let nextRow = lastIndex - currentColumn;
-        let nextColumn = currentRow;
+    for (let row = 0; row < lastIndex; row++) {
+        for (let column = row; column < index; column++) {
+            let currentRow = row;
+            let currentColumn = column;
+            const temp = matrix[row][column];
 
-        if (nextRow === 0 && nextColumn === 0) {
-            matrix[currentRow][currentColumn] = temp;
-        } else {
-            matrix[currentRow][currentColumn] = matrix[nextRow][nextColumn];
+            do {
+                const nextRow = lastIndex - currentColumn;
+                const nextColumn = currentRow;
+
+                if (nextRow === row && nextColumn === column) {
+                    matrix[currentRow][currentColumn] = temp;
+                } else {
+                    matrix[currentRow][currentColumn] = matrix[nextRow][nextColumn];
+                }
+
+                currentRow = nextRow;
+                currentColumn = nextColumn;
+            } while (!(currentRow === row && currentColumn === column));
         }
-
-        currentRow = nextRow;
-        currentColumn = nextColumn;
-        console.log(matrix);
-    } while (!(currentRow === 0 && currentColumn === 0))
-
-
-    console.log(matrix);
-
+        index--;
+    }
 }
