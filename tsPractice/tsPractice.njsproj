@@ -55,6 +55,7 @@
     <Folder Include="src\ContainsDuplicates\" />
     <Folder Include="src\InstersectionOfTwoArraysII\" />
     <Folder Include="src\MoveZeroes\" />
+    <Folder Include="src\ReverseInteger\" />
     <Folder Include="src\RotateImage\" />
     <Folder Include="src\PlusOne\" />
     <Folder Include="src\ValidSudoku\" />
@@ -95,6 +96,12 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Src\RemoveDuplicatesFromSortedArray\removeDuplicates.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\ReverseInteger\reverseInteger.test.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\ReverseInteger\reverseInteger.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Src\RotateArray\RotateArray.ts">
